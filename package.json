@@ -1,0 +1,34 @@
+{
+  "name": "automationpracticesiteproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "open": "npx cypress open",
+    "headTest": "npx cypress run --headed",
+    "headTestNotClose": "npx cypress run --headed --no-exit",
+    "chromeTest": "npx cypress run --browser chrome",
+    "chromeTestParallel": "npx cypress run --browser chrome --parallel",
+    "recordDashBoardTest": "npx cypress run --record --key {GeneratedInCypressDashboarKey}--reporter mochawesome",
+    "specTest": "npx cypress run --spec cypress/e2e/aps/featueres/*.feature --headed --browser chrome",
+    "regressionTest": "npx cypress run --env tag=\"@Regression\" --headed --browser chrome"
+  },
+  "author": "ismail-ozkan",
+  "license": "ISC",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.4",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^12.17.3"
+  },
+  "devDependencies": {
+    "cypress-iframe": "^1.0.1",
+    "multiple-cucumber-html-reporter": "^3.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReport/results.json"
+    }
+  },
+  "description": ""
+}
