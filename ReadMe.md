@@ -20,7 +20,7 @@ engineers and stakeholders.
 > #### `npm install @cypress/browserify-preprocessor`
 > Integrate Browserify preprocessor to bundle files for Cypress.
 ---
-> #### `npm install -D cypress -iframe`
+> #### `npm install -D cypress-iframe`
 > This package provides functionality for working with iframes in Cypress tests
 ---
 > #### `npm install multiple-cucumber-html-reporter --save-dev`
@@ -70,8 +70,7 @@ We can run following command to generate our test report.
 
 ## Apply some congfiguration to implement Cucumber-Processor in the project
 
-In [cypress.config.js ](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\cypress.config.js) we add
-following part
+### In [cypress.config.js ](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\cypress.config.js) we add following parts
 
 ``` 
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
@@ -86,7 +85,13 @@ on("file:preprocessor", browserify.default(config));
 return config;
 }
 ```
-
+We add following part inside e2e
+```
+e2e: {
+        setupNodeEvents,
+        specPattern: 'cypress/e2e/features/*.feature'
+    }
+```
 Under defineConfig() we add this part to specify our url and something needed then we can call them using Cypress.env()
 method
 
@@ -98,7 +103,7 @@ env: {
 },
 ```
 
-Under [package.json](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\package.json) file, we add this part
+### Under [package.json](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\package.json) file, we add this part
 
 ```
 "cypress-cucumber-preprocessor": {

@@ -14,14 +14,19 @@ async function setupNodeEvents(on, config) {
 
 module.exports = defineConfig({
     env: {
-        url: "https://www.google.com/",
+        url: "https://www.google.com",
         userId: "user471",
         password: "user471!"
     },
     e2e: {
         setupNodeEvents,
-        specPattern: 'cypress/e2e/aps/features/*.feature'
+        specPattern: 'cypress/e2e/features/*.feature'
     },
     viewportHeight: 660,
     viewportWidth: 1366,
+    video: false,
+    retries: {
+        runMode: 0,
+    },
+    projectId: "id",
 });
