@@ -126,7 +126,7 @@ And we add this part to use scripts easily.
     "chromeTestParallel": "npx cypress run --browser chrome --parallel",
     "recordDashBoardTest": "npx cypress run --record --key {GeneratedInCypressDashboarKey}--reporter mochawesome",
     "specTest": "npx cypress run --spec cypress/e2e/aps/featueres/*.feature --headed --browser chrome",
-    "regressionTest": "npx cypress run --env tag=\"@Regression\" --headed --browser chrome"
+    "regressionTest": "npx cypress run --env tags=\"@Regression\" --headed --browser chrome"
   }
 ```
 
