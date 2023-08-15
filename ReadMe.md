@@ -171,7 +171,8 @@ Cypress.Commands.add('methodNameToCall',function (parameter){
 
 1. git init
 2. git add README.md
-3. git commit -m "first commit"
-4. git branch -M master
-5. git remote add origin https://github.com/ismail-ozkan/CypressAutomationTemplateProject
-6. git push -u origin master
+3. git add .
+4. git commit -m "first commit"
+5. git branch -M master
+6. git remote add origin https://github.com/ismail-ozkan/CypressAutomationTemplateProject
+7. git push -u origin master
