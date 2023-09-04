@@ -37,7 +37,7 @@ engineers and stakeholders.
 
 We create a new JS file named cucumber-html-report.js and put inside it following code.
 
-```
+```javascript
 const report = require("multiple-cucumber-html-reporter");
 
 report.generate({
