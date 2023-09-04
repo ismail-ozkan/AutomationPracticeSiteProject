@@ -72,7 +72,7 @@ We can run following command to generate our test report.
 
 ### In [cypress.config.js ](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\cypress.config.js) we add following parts
 
-``` 
+```javascript
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify");
 async function setupNodeEvents(on, config) {
@@ -86,7 +86,7 @@ return config;
 }
 ```
 We add following part inside e2e
-```
+```javascript
 e2e: {
         setupNodeEvents,
         specPattern: 'cypress/e2e/features/*.feature'
@@ -95,7 +95,7 @@ e2e: {
 Under defineConfig() we add this part to specify our url and something needed then we can call them using Cypress.env()
 method
 
-```
+```javascript
 env: {
     url: "https://rahulshettyacademy.com",
     email : "ismailozkanlaw@gmail.com",
@@ -105,7 +105,7 @@ env: {
 
 ### Under [package.json](C:\Users\ismail\WebstormProjects\AutomationPracticeSiteProject\package.json) file, we add this part
 
-```
+```javascript
 "cypress-cucumber-preprocessor": {
     "json": {
       "enabled": true,
@@ -116,7 +116,7 @@ env: {
 
 And we add this part to use scripts easily.
 
-```
+```javascript
 "scripts": {
     "test": "npx cypress run",
     "open": "npx cypress open",
@@ -138,7 +138,7 @@ And we add this part to use scripts easily.
 
 > ### We can create and store our custom methods that we use in our framework.
 
-```
+```javascript
 Cypress.Commands.add('methodNameToCall',function (parameter){
     // implementation of method
 })
